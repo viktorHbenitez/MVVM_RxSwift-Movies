@@ -17,6 +17,7 @@
 		CD804BB924F8540C008E37C1 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD804BB724F8540C008E37C1 /* HomeView.xib */; };
 		CD804BBC24F85470008E37C1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD804BBB24F85470008E37C1 /* HomeRouter.swift */; };
 		CD804BC124F8577D008E37C1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD804BC024F8577D008E37C1 /* HomeViewModel.swift */; };
+		CD804BC424F86A9C008E37C1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD804BC324F86A9C008E37C1 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CD804BB724F8540C008E37C1 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		CD804BBB24F85470008E37C1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		CD804BC024F8577D008E37C1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CD804BC324F86A9C008E37C1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				CD804B9224F85337008E37C1 /* AppDelegate.swift */,
 				CD804B9424F85337008E37C1 /* SceneDelegate.swift */,
 				CD804B9624F85337008E37C1 /* ViewController.swift */,
+				CD804BC224F86A90008E37C1 /* Source */,
 				CD804BB524F85365008E37C1 /* DetailView */,
 				CD804BB424F85341008E37C1 /* Home */,
 				CD804B9B24F85339008E37C1 /* Assets.xcassets */,
@@ -154,6 +157,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CD804BC224F86A90008E37C1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CD804BC324F86A9C008E37C1 /* Constant.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD804BC424F86A9C008E37C1 /* Constant.swift in Sources */,
 				CD804B9724F85337008E37C1 /* ViewController.swift in Sources */,
 				CD804BC124F8577D008E37C1 /* HomeViewModel.swift in Sources */,
 				CD804BB824F8540C008E37C1 /* HomeView.swift in Sources */,
