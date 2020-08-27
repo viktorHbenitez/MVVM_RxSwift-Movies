@@ -31,9 +31,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 4. add window scene
         window?.windowScene = windowScene
         
-        
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -66,4 +63,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-

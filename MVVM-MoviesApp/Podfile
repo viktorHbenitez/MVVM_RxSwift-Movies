@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MVVM-MoviesApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MVVM-MoviesApp
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+
+  target 'MVVM-MoviesAppUITests' do
+    # Pods for testing
+  end
+
+end

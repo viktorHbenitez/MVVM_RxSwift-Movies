@@ -8,8 +8,12 @@
 
 import UIKit
 
-class HomeView: UIViewController {
+class HomeView : UIViewController {
 
+    @IBOutlet weak var tblView : UITableView!
+    @IBOutlet weak var actActivity :  UIActivityIndicatorView!
+    
+    <
     private var router : HomeRouter = HomeRouter()
     private var viewModel : HomeViewModel = HomeViewModel()
     
@@ -17,4 +21,24 @@ class HomeView: UIViewController {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
     }
+}
+
+extension HomeView: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        return UITableViewCell()
+    }
+    
+    
+    
 }
