@@ -21,7 +21,7 @@ class HomeRouter {
     
     
     private func createViewController() -> UIViewController{
-        return  UIViewController(nibName: "HomeView", bundle: Bundle.main)
+        return  HomeView()
     }
     
     // bind the router wih the viewmodel

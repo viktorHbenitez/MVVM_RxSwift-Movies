@@ -9,7 +9,7 @@
 import UIKit
 
 struct Constant {
-    static let apiKey = "d42ba768f459c34eadb1c87039308cbb"
+    static let apiKey = "?api_key=d42ba768f459c34eadb1c87039308cbb"
     struct URL {
         static let main = "https://api.themoviedb.org/"
         static let urlImage = "https://image.tmdb.org/t/p/w200"

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="MVVM_MoviesApp" customModuleProvider="target">
             <connections>
-                <outlet property="actActivity" destination="Bb1-jZ-F71" id="Px2-Qx-yMa"/>
-                <outlet property="tblView" destination="4gt-kW-iE1" id="hGE-Nd-deR"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="tblView" destination="wex-IB-INg" id="clj-Jr-ee5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="vcS-ya-Y2b"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,24 +18,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-kW-iE1">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wex-IB-INg">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="Bb1-jZ-F71">
-                    <rect key="frame" x="136" y="132" width="142" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="color" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="4gt-kW-iE1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Kb-gg-PCP"/>
-                <constraint firstItem="4gt-kW-iE1" firstAttribute="top" secondItem="Bb1-jZ-F71" secondAttribute="bottom" constant="-176" id="QDh-1v-Uwl"/>
-                <constraint firstItem="4gt-kW-iE1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yvf-UN-Osh"/>
-                <constraint firstItem="Bb1-jZ-F71" firstAttribute="centerX" secondItem="4gt-kW-iE1" secondAttribute="centerX" id="blN-14-9u6"/>
-                <constraint firstAttribute="bottom" secondItem="4gt-kW-iE1" secondAttribute="bottom" id="eM6-EN-qSj"/>
-                <constraint firstAttribute="trailing" secondItem="4gt-kW-iE1" secondAttribute="trailing" id="fFC-JV-Ezf"/>
+                <constraint firstItem="wex-IB-INg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="C7P-qE-7Rp"/>
+                <constraint firstItem="wex-IB-INg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CTE-r2-KpY"/>
+                <constraint firstAttribute="bottom" secondItem="wex-IB-INg" secondAttribute="bottom" id="LUH-MM-GB7"/>
+                <constraint firstItem="wex-IB-INg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vTI-dw-nDK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
