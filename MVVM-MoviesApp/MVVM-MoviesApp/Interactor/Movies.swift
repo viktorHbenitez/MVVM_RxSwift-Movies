@@ -8,6 +8,20 @@
 
 import Foundation
 
+
+
+protocol IItemInterface {
+  var strTitle : String{ get }
+  var strOverview : String { get }
+  var strTitleCell : String { get }
+  var strUrl : String { get }
+}
+extension IItemInterface{
+  var strTitleCell : String {
+    return strTitle
+  }
+}
+
 struct Movies : Codable {
   var  arrMovies : [Movie]
   enum CodingKeys: String, CodingKey{
@@ -15,9 +29,7 @@ struct Movies : Codable {
    }
   
 }
-
-
-struct Movie : Codable {
+struct Movie : Codable, IItemInterface {
   var strTitle : String
   var strPopularity : Double
   var iMovieID : Int
@@ -38,6 +50,15 @@ struct Movie : Codable {
     case strOverview = "overview"
     case strReleaseDate  = "release_date"
     case strPosterPath = "poster_path"
+  }
+  
+  
+  var strTitleCell : String{
+    return "Movie \(strTitle)"
+  }
+  
+  var strUrl : String{
+    return  Constant.URL.urlImage+strPosterPath
   }
   
 }

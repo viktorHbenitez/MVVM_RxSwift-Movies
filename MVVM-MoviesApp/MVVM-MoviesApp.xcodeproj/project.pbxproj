@@ -19,7 +19,10 @@
 		CD804BC124F8577D008E37C1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD804BC024F8577D008E37C1 /* HomeViewModel.swift */; };
 		CD804BC424F86A9C008E37C1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD804BC324F86A9C008E37C1 /* Constant.swift */; };
 		D56B17B9C5F79B17967562D5 /* Pods_MVVM_MoviesApp_MVVM_MoviesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE26A05BDBE3CAF9495820FC /* Pods_MVVM_MoviesApp_MVVM_MoviesAppUITests.framework */; };
+		E430ADAA24FB04570061787E /* UIImage+imageFromService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430ADA924FB04570061787E /* UIImage+imageFromService.swift */; };
 		E45FB94924F95CC3008CCE61 /* Storyboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45FB94824F95CC3008CCE61 /* Storyboard+extension.swift */; };
+		E45FB94C24F9860B008CCE61 /* HomeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45FB94A24F9860B008CCE61 /* HomeCustomCell.swift */; };
+		E45FB94D24F9860B008CCE61 /* HomeCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45FB94B24F9860B008CCE61 /* HomeCustomCell.xib */; };
 		E4E34BD524F8A21B00ED251D /* ManagerConnnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E34BD424F8A21B00ED251D /* ManagerConnnection.swift */; };
 		E4E34BD724F8A2DA00ED251D /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E34BD624F8A2D900ED251D /* Movies.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +57,10 @@
 		CD804BBB24F85470008E37C1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		CD804BC024F8577D008E37C1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CD804BC324F86A9C008E37C1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E430ADA924FB04570061787E /* UIImage+imageFromService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromService.swift"; sourceTree = "<group>"; };
 		E45FB94824F95CC3008CCE61 /* Storyboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+extension.swift"; sourceTree = "<group>"; };
+		E45FB94A24F9860B008CCE61 /* HomeCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomCell.swift; sourceTree = "<group>"; };
+		E45FB94B24F9860B008CCE61 /* HomeCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCustomCell.xib; sourceTree = "<group>"; };
 		E4E34BD424F8A21B00ED251D /* ManagerConnnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerConnnection.swift; sourceTree = "<group>"; };
 		E4E34BD624F8A2D900ED251D /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movies.swift; path = "MVVM-MoviesApp/Interactor/Movies.swift"; sourceTree = SOURCE_ROOT; };
 		FE26A05BDBE3CAF9495820FC /* Pods_MVVM_MoviesApp_MVVM_MoviesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_MoviesApp_MVVM_MoviesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +165,8 @@
 			children = (
 				CD804BB624F8540C008E37C1 /* HomeView.swift */,
 				CD804BB724F8540C008E37C1 /* HomeView.xib */,
+				E45FB94A24F9860B008CCE61 /* HomeCustomCell.swift */,
+				E45FB94B24F9860B008CCE61 /* HomeCustomCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			children = (
 				CD804BC324F86A9C008E37C1 /* Constant.swift */,
 				E45FB94824F95CC3008CCE61 /* Storyboard+extension.swift */,
+				E430ADA924FB04570061787E /* UIImage+imageFromService.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 				CD804B9F24F85339008E37C1 /* LaunchScreen.storyboard in Resources */,
 				CD804B9C24F85339008E37C1 /* Assets.xcassets in Resources */,
 				CD804BB924F8540C008E37C1 /* HomeView.xib in Resources */,
+				E45FB94D24F9860B008CCE61 /* HomeCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,8 +410,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD804BC424F86A9C008E37C1 /* Constant.swift in Sources */,
+				E45FB94C24F9860B008CCE61 /* HomeCustomCell.swift in Sources */,
 				CD804BC124F8577D008E37C1 /* HomeViewModel.swift in Sources */,
 				CD804BB824F8540C008E37C1 /* HomeView.swift in Sources */,
+				E430ADAA24FB04570061787E /* UIImage+imageFromService.swift in Sources */,
 				E4E34BD524F8A21B00ED251D /* ManagerConnnection.swift in Sources */,
 				E4E34BD724F8A2DA00ED251D /* Movies.swift in Sources */,
 				CD804B9324F85337008E37C1 /* AppDelegate.swift in Sources */,

@@ -10,7 +10,12 @@ import UIKit
 import RxSwift
 class HomeView : UIViewController {
   
-  @IBOutlet weak var tblView : UITableView!
+  @IBOutlet weak var tblView : UITableView!{
+    didSet{
+      tblView.delegate = self
+      tblView.dataSource = self
+    }
+  }
   @IBOutlet weak var actActivity : UIActivityIndicatorView!
   
 //  @IBOutlet weak var tblView: UITableView!
@@ -22,12 +27,17 @@ class HomeView : UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewModel.bind(view: self, router: router)
-    getData()
-    
-    
+    setupTableView()
+    getDataFromManagerConnection()
   }
   
-  private func getData(){
+  func setupTableView(){
+    tblView.register(UINib(nibName: HomeCustomCell.identifier, bundle: nil),
+                     forCellReuseIdentifier: HomeCustomCell.identifier)
+    
+  }
+  // get data for API Service form ViewModel
+  private func getDataFromManagerConnection(){
     return viewModel.getListMovieData()
       //Manage the concurrency of threand
       .subscribeOn(MainScheduler.instance)
@@ -39,7 +49,7 @@ class HomeView : UIViewController {
       }, onError: { error in
         print(error.localizedDescription)
       }, onCompleted: {
-      }).disposed(by: disposeBag)
+      }).disposed(by: disposeBag) // completed  rxObserve
   }
   
   func reloadTableView(){
@@ -63,7 +73,7 @@ class HomeView : UIViewController {
 
 extension HomeView: UITableViewDelegate, UITableViewDataSource{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return arrMovies.count
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +82,10 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    if let cell = tableView.dequeueReusableCell(withIdentifier: HomeCustomCell.identifier, for: indexPath) as? HomeCustomCell{
+      cell.setupCell(arrMovies[indexPath.row])
+      return cell
+    }
     
     return UITableViewCell()
   }

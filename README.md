@@ -6,6 +6,11 @@ Description : Show the most popular movies and the top ten in the world using th
 Reference  [themoviedb](https://www.themoviedb.org/)
 
 
+Version 1
+Description: Show popular movies form The-moviewDB API Services using RxSwift and MVVM
+
+![show top movies in the world](https://github.com/viktorHbenitez/MVVM_RxSwift-Movies/blob/master/sketch/version1.png)  
+
 
  ##  Setup Project
  - - - - - - - - - -
@@ -19,6 +24,10 @@ Reference  [themoviedb](https://www.themoviedb.org/)
  ## Cocoa Pods 
  RxSwift: ReactiveX for Swift
 Reference  [RxSwift](https://github.com/ReactiveX/RxSwift)
+ 
+ 
+ 
+ 
  
  
  

@@ -15,3 +15,11 @@ extension StoryboadID where Self : UIViewController{
   }
 }
 extension UIViewController : StoryboadID{}
+
+
+extension UITableViewCell{
+  
+  static var identifier : String {return String(describing: self)}
+  
+  
+}

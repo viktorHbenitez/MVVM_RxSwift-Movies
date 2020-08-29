@@ -27,7 +27,6 @@ class ManagerConnection {
         
         do{
           let arrData = try JSONDecoder().decode(Movies.self, from: data)
-          print("arr data ", arrData.arrMovies[0])
           observer.onNext(arrData.arrMovies)
         }catch let error{
           observer.onError(error)
