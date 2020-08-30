@@ -59,39 +59,3 @@ class HomeCustomCell: UITableViewCell {
   }
   
 }
-
-
-
-/*:
- ## TITLE
- - - - - - - - - - -
- 
- Concept: Description
- 
- Something is executed in the process
- 
- - **Bold**      : Description.
- 
- 
- qos : Quality of service (priority)
- - user interactive (highest)
- - User initated (second highest)
- - ...
- - background (lowest)
- 
- Async (Asynchronous) - Your program does not wait for code to finish. it continues on.
- Sync (Synchronues) - Your program waits for code / task to finish before continuing to the next task
- 
- ## SUBTITLE
- Concept : Description
- 
- LINK Find more information [Description link](https://www.google.com)
- 
- SHOW CODE
- 
- ```Swift
- var strParameter : String?
- ```
- IMAGE
- ![image description](image.png)
- */
