@@ -16,6 +16,6 @@ struct Constant {
     }
     struct Endpoints {
         static let urlPopularMovies = "3/movie/popular"
-        static let urlDetailMovie = "3/moview"
+        static let urlDetailMovie = "3/movie/"
     }
 }

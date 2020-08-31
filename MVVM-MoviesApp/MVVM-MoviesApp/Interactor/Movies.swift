@@ -15,6 +15,7 @@ protocol IItemInterface {
   var strOverview : String { get }
   var strTitleCell : String { get }
   var strUrl : String { get }
+  var strID : String {get}
 }
 extension IItemInterface{
   var strTitleCell : String {
@@ -59,6 +60,10 @@ struct Movie : Codable, IItemInterface {
   
   var strUrl : String{
     return  Constant.URL.urlImage+strPosterPath
+  }
+  
+  var strID : String{
+    return "\(iMovieID)"
   }
   
 }

@@ -16,6 +16,7 @@ class HomeViewModel {
   private var router : HomeRouter?
   private var bsManagerConnection : ManagerConnection = ManagerConnection()
   
+  
   // this is the initial method
   // bind the router to the view
   func bind( view : HomeView, router : HomeRouter){
@@ -26,6 +27,10 @@ class HomeViewModel {
   
   func getListMovieData() -> Observable<[Movie]>{
     return bsManagerConnection.getPopularMovies()
+  }
+  
+  func makeDetailView( strMovieID : String?){
+    router?.navigationDetailView(strID: strMovieID)
   }
   
 }

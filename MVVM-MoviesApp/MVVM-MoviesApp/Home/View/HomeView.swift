@@ -19,13 +19,13 @@ class HomeView : UIViewController {
   }
   
   private var router : HomeRouter = HomeRouter()
-  private var viewModel : HomeViewModel = HomeViewModel()
+  var viewModel : HomeViewModel = HomeViewModel()
   private var disposeBag = DisposeBag()
-  private var arrMovies = [Movie]()
-  private var arrFiltered : [Movie] = [Movie]()
+  private var arrMovies = [IItemInterface]()
+  private var arrFiltered : [IItemInterface] = [IItemInterface]()
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     viewModel.bind(view: self, router: router)
     setupTableView()
     getDataFromManagerConnection()
@@ -153,7 +153,17 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource{
     return UITableViewCell()
   }
   
-  
+  func tableView(_ tableView: UITableView,
+                 didSelectRowAt indexPath: IndexPath) {
+    var bsData : IItemInterface?
+    if searchController.isActive && searchController.searchBar.text != ""{
+      bsData = arrFiltered[indexPath.row]
+    }
+    else{
+      bsData = arrMovies[indexPath.row]
+    }
+    viewModel.makeDetailView(strMovieID: bsData?.strID)
+  }
   
 }
 

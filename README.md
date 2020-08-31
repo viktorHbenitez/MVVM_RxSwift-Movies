@@ -6,6 +6,9 @@ Description : Show the most popular movies and the top ten in the world using th
 Reference  [themoviedb](https://www.themoviedb.org/)
 
 
+![MVVM  and RxSwift](https://github.com/viktorHbenitez/MVVM_RxSwift-Movies/blob/master/sketch/MovieVersion.png)  
+
+
 ## Version 2
 Description:  Add searchbarController in the popular UIView
 

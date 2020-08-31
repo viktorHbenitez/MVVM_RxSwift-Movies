@@ -18,8 +18,7 @@ class HomeRouter {
     var viewController : UIViewController{
         return createViewController()
     }
-    
-    
+  
     private func createViewController() -> UIViewController{
         return  HomeView()
     }
@@ -29,7 +28,13 @@ class HomeRouter {
         guard let vwData = vwSource else {fatalError("set source view error")}
         self.soureView = vwData
     }
+  
+  func navigationDetailView(strID : String?){
+    if let detailView = DetailRouter(strID).viewController as? DetailMoviewView{
+      detailView.strMovieID = strID
+      soureView?.navigationController?.pushViewController(detailView, animated: true)
+    }
     
-    
-    
+  }
+  
 }
